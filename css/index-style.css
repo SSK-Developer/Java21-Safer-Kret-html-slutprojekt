@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+/* ==========================startsida========================= */
+.grid-container-startsida{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 4rem 20rem auto 6rem;
+}
+
+/* Start nav-bar */
+nav{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: sticky;
+    top: 0;
+
+    justify-content: space-evenly;
+
+    border-bottom: 2px rgba(0, 0, 0, 0.144) solid;
+}
+
+.grid-container-startsida nav{
+    grid-row: 1/2;
+    grid-column: 1/3;
+}
+
+nav a{
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+}
+
+.logo{
+    color:#0074D9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color:#0074D9;
+}
+
+nav a:nth-child(1){
+    margin-right: auto;
+}
+
+/* end nav-bar */
+
+
+/* start main */
+.grid-container-startsida main{
+    padding: 1rem;
+
+    grid-row: 3/4;
+    grid-column: 1/3;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-links{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.project-links a{
+    padding: 10px;
+}
+
+.grid-container-startsida main a:hover{
+    opacity: 0.6;
+}
+
+.grid-container-startsida p{
+    color:#0074D9;
+    font-size: 3rem;
+    padding-bottom: 10px;
+}
+
+/* end main */
+
+
+
+/* start section */
+.grid-container-startsida section{
+
+    grid-row: 2/3;
+    grid-column: 1/2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* end section */
+
+
+/* start aside */
+.grid-container-startsida aside{
+    padding: 1rem;
+
+    grid-row: 2/3;
+    grid-column: 2/3;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* end aside */
+
+.grid-container-startsida img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: black 10px 10px 20px 0px;
+}
+
+.grid-container-startsida footer{
+    background-color: rgba(128, 128, 128, 0.200);
+    padding-top: 2rem;
+    text-align: center;
+
+    grid-row: 4/5;
+    grid-column: 1/3;
+}
+/* ===========================startsida========================= */
+
+
+/* ============================about============================ */
+
+.grid-container-about{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 4rem auto auto 6rem;
+    grid-template-columns: auto;
+}
+
+.grid-container-about nav{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.grid-container-about main{
+    grid-row: 2/3;
+    grid-template-columns: 1/2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 20px;
+}
+
+.grid-container-about img{
+    border-radius: 50%;
+    box-shadow: 5px 5px 50px 0px;
+}
+
+.grid-container-about article{
+    grid-row: 3/4;
+    grid-column: 1/2;
+    margin:5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container-about footer{
+    grid-row: 4/5;
+    grid-column: 1/2;
+
+    background-color: rgba(128, 128, 128, 0.200);
+    padding-top: 2rem;
+    text-align: center;
+}
+/* =====================about=================== */
+
+
+/* =====================contact=================== */
+.grid-container-contact{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 4rem auto 6rem;
+    grid-template-columns: auto;
+}
+
+.grid-container-contact nav{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.grid-container-contact main{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content:center;
+}
+
+.grid-container-contact h1{
+    padding-bottom: 10px;
+}
+
+.grid-container-contact footer{
+    grid-row: 3/4;
+    grid-column: 1/2;
+
+    background-color: rgba(128, 128, 128, 0.74);
+    padding-top: 2rem;
+}
+/* =====================contact=================== */
+
+
+@media (max-width: 671px)
+{
+    .grid-container-startsida
+    {
+        grid-template-columns: auto;
+        grid-template-rows: 3rem 10rem 20rem auto 6rem;
+    }
+    .grid-container-startsida nav{
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    
+    .grid-container-startsida section{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .grid-container-startsida aside{
+        grid-row: 3/4;
+        grid-column: 1/2;
+
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .grid-container-startsida main{
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+    
+    .grid-container-startsida footer{
+        grid-row: 5/6;
+        grid-column: 1/2;
+    }
+}
